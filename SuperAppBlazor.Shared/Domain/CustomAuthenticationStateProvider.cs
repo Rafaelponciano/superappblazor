@@ -41,7 +41,6 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
         {
             MarkUserAsLoggedOut();
         }
-
         return Task.FromResult(false);
     }
 
