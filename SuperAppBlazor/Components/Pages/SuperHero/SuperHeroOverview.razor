@@ -1,0 +1,29 @@
+@page "/SuperHero/SuperHeroOverview"
+@rendermode InteractiveServer
+
+<PageTitle>@Title</PageTitle>
+
+@if (SuperHeroes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <QuickViewPopup SuperHero="_selectedSuperHero"></QuickViewPopup>
+    <div class="row">
+        @foreach (var superHero in SuperHeroes)
+        {
+            <ErrorBoundary>
+                <ChildContent>
+                    <div class="col-6 col-lg-4 col-xl-3 col-xxl-3">
+                        <SuperHeroCard SuperHero="superHero" SuperHeroQuickViewClicked="ShowQuickViewPopup"></SuperHeroCard>
+                    </div>
+                </ChildContent>
+                <ErrorContent>
+                    <p class="errorUI">Super Heroi Inválido!</p>
+                </ErrorContent>
+            </ErrorBoundary>
+        }
+    </div>
+}
+    

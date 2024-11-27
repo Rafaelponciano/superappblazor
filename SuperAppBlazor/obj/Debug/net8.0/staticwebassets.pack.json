@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/obj/Debug/net8.0/scopedcss/projectbundle/SuperAppBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets/SuperAppBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/wwwroot/scripts/site.js",
+      "PackagePath": "staticwebassets/scripts/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.SuperAppBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.SuperAppBlazor.props",
+      "PackagePath": "build\\SuperAppBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.SuperAppBlazor.props",
+      "PackagePath": "buildMultiTargeting\\SuperAppBlazor.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.SuperAppBlazor.props",
+      "PackagePath": "buildTransitive\\SuperAppBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

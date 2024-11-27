@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperAppBlazor", "SuperAppBlazor\SuperAppBlazor.csproj", "{88FC0B22-19C3-41AC-BF15-C2734C2B4711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperAppBlazor.Shared", "SuperAppBlazor.Shared\SuperAppBlazor.Shared.csproj", "{0D208E50-3DDF-4E09-8AD3-310EE4F78938}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88FC0B22-19C3-41AC-BF15-C2734C2B4711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FC0B22-19C3-41AC-BF15-C2734C2B4711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FC0B22-19C3-41AC-BF15-C2734C2B4711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FC0B22-19C3-41AC-BF15-C2734C2B4711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D208E50-3DDF-4E09-8AD3-310EE4F78938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D208E50-3DDF-4E09-8AD3-310EE4F78938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D208E50-3DDF-4E09-8AD3-310EE4F78938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D208E50-3DDF-4E09-8AD3-310EE4F78938}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

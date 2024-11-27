@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SuperAppBlazor
+build_property.RootNamespace = SuperAppBlazor
+build_property.ProjectDir = /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/Account/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BY2NvdW50L0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/SuperHero/SuperHeroDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TdXBlckhlcm8vU3VwZXJIZXJvRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/SuperHero/SuperHeroOverview.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TdXBlckhlcm8vU3VwZXJIZXJvT3ZlcnZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/ProfilePicture.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Qcm9maWxlUGljdHVyZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/QuickViewPopup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9RdWlja1ZpZXdQb3B1cC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/SuperHeroCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdXBlckhlcm9DYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Widgets/InboxWidget.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9XaWRnZXRzL0luYm94V2lkZ2V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Widgets/SuperHeroCountWidget.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9XaWRnZXRzL1N1cGVySGVyb0NvdW50V2lkZ2V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1bduqqk10i
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-7wauqyfttv

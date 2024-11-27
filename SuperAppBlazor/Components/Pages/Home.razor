@@ -1,0 +1,14 @@
+﻿@page "/"
+
+@attribute [Authorize(Policy = "AuthenticatedUser")]
+<PageTitle>Home</PageTitle>
+
+<h1>O sistema dos super herois</h1>
+
+Bem Vindos!!!
+<br />
+
+@foreach (var widgetType in Widgets)
+{
+    <DynamicComponent Type="@widgetType"></DynamicComponent>
+}
