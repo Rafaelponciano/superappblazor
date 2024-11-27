@@ -5,12 +5,12 @@
     <DataAnnotationsValidator />
     <ValidationSummary />
     <div class="form-group">
-        <label for="email">Primeiro Nome:</label>
+        <label for="firstName">Primeiro Nome:</label>
         <InputText id="firstName" @bind-Value="RegisterUser.FirstName" class="form-control" />
     </div>
 
     <div class="form-group">
-        <label for="email">Ultimo Nome:</label>
+        <label for="lastName">Ultimo Nome:</label>
         <InputText id="lastName" @bind-Value="RegisterUser.LastName" class="form-control" />
     </div>
     
@@ -25,7 +25,7 @@
     </div>
 
     <div class="form-group">
-        <label for="password">Confirma o Password:</label>
+        <label for="confirmPassword">Confirma o Password:</label>
         <InputText id="confirmPassword" @bind-Value="RegisterUser.ConfirmPassword" type="password" class="form-control" />
     </div>
     <button type="submit" class="btn btn-primary">Criar usuario</button>

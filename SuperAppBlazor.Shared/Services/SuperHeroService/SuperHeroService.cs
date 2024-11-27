@@ -29,13 +29,13 @@ public class SuperHeroService: ISuperHeroService
             // Verifica se a resposta foi bem-sucedida
             if (response.IsSuccessStatusCode)
             {
-                var resultWrapper = JsonSerializer.Deserialize<GetSuperHero>(jsonString, new JsonSerializerOptions
+                var resultWrapper = JsonSerializer.Deserialize<SuperHero>(jsonString, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
                     
                 // Retorna a lista de SuperHero do resultado envoltório
-                return resultWrapper?.Result;
+                return resultWrapper;
             }
             else
             {
@@ -89,9 +89,40 @@ public class SuperHeroService: ISuperHeroService
         }
     }
 
-    public void Delete(int id)
+    public async Task<List<SuperHero>?> Delete(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            // Faz a requisição HTTP para a API
+            HttpResponseMessage response = await _httpClient.DeleteAsync("/api/SuperHero/"+id);
+
+            // Log da resposta JSON
+            string jsonString = await response.Content.ReadAsStringAsync();
+
+            // Verifica se a resposta foi bem-sucedida
+            if (response.IsSuccessStatusCode)
+            {
+                var resultWrapper = JsonSerializer.Deserialize<SuperHeroResult>(jsonString, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                    
+                // Retorna a lista de SuperHero do resultado envoltório
+                return resultWrapper?.Result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (JsonException ex)
+        {
+            return null;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
     }
 
     public async Task<List<SuperHero>?> GetAll()

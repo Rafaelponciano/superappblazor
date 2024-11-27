@@ -1,0 +1,33 @@
+@page "/SuperHero/SuperHeroInsert"
+
+<h3>Inserir Super Heroi</h3>
+
+<EditForm FormName="registerForm" Model="InsertSuperHero" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="name">Nome:</label>
+        <InputText id="name" @bind-Value="InsertSuperHero.Name" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="firstName">Primeiro Nome:</label>
+        <InputText id="firstName" @bind-Value="InsertSuperHero.FirstName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Ultimo Nome:</label>
+        <InputText id="lastName" @bind-Value="InsertSuperHero.LastName" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="power">Poder:</label>
+        <InputText id="power" @bind-Value="InsertSuperHero.Power" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="place">Cidade:</label>
+        <InputText id="place" @bind-Value="InsertSuperHero.Place" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Criar usuario</button>
+</EditForm>

@@ -15,4 +15,5 @@ public partial class SuperHeroCard : ComponentBase
             throw new ArgumentException("SuperHero.LastName is required");
         }
     }
+    
 }
