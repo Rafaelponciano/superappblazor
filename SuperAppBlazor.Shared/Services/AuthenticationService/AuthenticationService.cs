@@ -12,44 +12,106 @@ public class AuthenticationService: IAuthenticationService
     private readonly HttpClient _httpClient;
     public AuthenticationService(HttpClient httpClient)
     {
-        _httpClient = httpClient;
+        _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
     }
 
-    public async Task<Authentication?> Login(LoginUser loginUser)
+    public async Task<Authentication> Login(LoginUser loginUser)
     {
+        var jsonContent = new StringContent(
+            JsonSerializer.Serialize(loginUser), 
+            Encoding.UTF8, 
+            "application/json");
+        var cts = new CancellationTokenSource(TimeSpan.FromSeconds(100));
+        
         try
         {
-            var content = new StringContent(JsonSerializer.Serialize(loginUser), Encoding.UTF8, "application/json");
-            // Faz a requisição HTTP para a API
-            HttpResponseMessage response = await _httpClient.PostAsync("/api/Authentication/login", content);
+            // Log da tentativa de requisição
+            Console.WriteLine($"Sending POST request to '/api/login' with payload: {JsonSerializer.Serialize(loginUser)}");
 
-            // Log da resposta JSON
-            string jsonString = await response.Content.ReadAsStringAsync();
-
-            // Verifica se a resposta foi bem-sucedida
+            var response = await _httpClient.PostAsync("/api/authentication/login", jsonContent, cts.Token);
+            
+            // Log da resposta recebida
+            Console.WriteLine($"Received response: {response.StatusCode}");
+                
             if (response.IsSuccessStatusCode)
             {
+                string jsonString = await response.Content.ReadAsStringAsync();
                 var result = JsonSerializer.Deserialize<Authentication>(jsonString, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
-                    
-                // Retorna a lista de SuperHero do resultado envoltório
+                Console.WriteLine("Login successful.");
                 return result;
             }
             else
             {
-                return null;
+                // Log de status HTTP não-sucedido
+                string responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Login failed with status code: {response.StatusCode}, response: {responseContent}");
             }
+
+            return null;
+        }
+        catch (TaskCanceledException ex) when (!cts.IsCancellationRequested)
+        {
+            // Log the timeout exception
+            Console.WriteLine("Login request timed out.");
+            throw new TimeoutException("Login request timed out.", ex);
         }
         catch (Exception ex)
         {
-            return null;
+            throw;
         }
     }
 
     public async Task<Authentication?> Register(RegisterUser user)
     {
-        return await _httpClient.GetFromJsonAsync<Authentication>("api/authentication/register");
+        var jsonContent = new StringContent(
+            JsonSerializer.Serialize(user),
+            Encoding.UTF8,
+            "application/json");
+        var cts = new CancellationTokenSource(TimeSpan.FromSeconds(100));
+
+        try
+        {
+            // Log da tentativa de requisição
+            Console.WriteLine(
+                $"Sending POST request to '/api/authentication/register' with payload: {JsonSerializer.Serialize(user)}");
+
+            var response = await _httpClient.PostAsync("/api/authentication/register", jsonContent, cts.Token);
+
+            // Log da resposta recebida
+            Console.WriteLine($"Received response: {response.StatusCode}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonString = await response.Content.ReadAsStringAsync();
+                var result = JsonSerializer.Deserialize<Authentication>(jsonString, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                Console.WriteLine("Registro realizado com sucesso.");
+                return result;
+            }
+            else
+            {
+                // Log de status HTTP não-sucedido
+                string responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Login failed with status code: {response.StatusCode}, response: {responseContent}");
+            }
+
+            return null;
+        }
+        catch (TaskCanceledException ex) when (!cts.IsCancellationRequested)
+        {
+            // Log the timeout exception
+            Console.WriteLine("Login request timed out.");
+            throw new TimeoutException("Login request timed out.", ex);
+        }
+        catch (Exception ex)
+        {
+            throw;
+
+        }
     }
 }

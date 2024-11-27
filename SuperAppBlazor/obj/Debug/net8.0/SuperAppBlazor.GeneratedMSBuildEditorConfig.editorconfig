@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BY2NvdW50L0xvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/Account/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BY2NvdW50L1JlZ2lzdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/SuperHero/SuperHeroDetail.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TdXBlckhlcm8vU3VwZXJIZXJvRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/SuperHero/SuperHeroInsert.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TdXBlckhlcm8vU3VwZXJIZXJvSW5zZXJ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/Components/Pages/SuperHero/SuperHeroOverview.razor]

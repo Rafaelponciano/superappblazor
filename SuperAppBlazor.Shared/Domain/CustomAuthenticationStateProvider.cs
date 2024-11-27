@@ -27,7 +27,9 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, authUser.FirstName + " " + authUser.LastName),
-                new Claim(ClaimTypes.Email, authUser.Email)
+                new Claim(ClaimTypes.Email, authUser.Email),
+                new Claim(ClaimTypes.NameIdentifier, authUser.UserId.ToString()),
+                new Claim(ClaimTypes.Role, "User"),
             };
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -37,10 +39,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
 
             return Task.FromResult(true);
         }
-        else
-        {
-            MarkUserAsLoggedOut();
-        }
+        
         return Task.FromResult(false);
     }
 

@@ -12,6 +12,12 @@ public partial class Login : ComponentBase
     [Inject] private CustomAuthenticationStateProvider CustomAuthenticationStateProvider { get; set; }  
     [SupplyParameterFromForm] public LoginUser LoginUser { get; set; }
 
+    public bool IsRegister { get; set; } = false;
+    private void ChangeStateOfPage()
+    {
+        IsRegister = !IsRegister;
+    }
+
     protected override void OnInitialized()
     {
         LoginUser ??= new LoginUser();

@@ -18,4 +18,14 @@ public partial class SuperHeroDetail : ComponentBase
     {
         SuperHero = await SuperHeroService.GetById(SuperHeroId);
     }
+    
+    private async void OnSubmit(int superHeroId)
+    {
+        await SuperHeroService?.Delete(superHeroId)!;
+    }
+    
+    private async Task OnDeleteHandling()
+    {
+        OnSubmit(SuperHeroId);
+    }
 }

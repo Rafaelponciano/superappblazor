@@ -9,17 +9,47 @@ namespace SuperAppBlazor.Shared.Services.SuperHeroService;
 public class SuperHeroService: ISuperHeroService
 {
     private readonly HttpClient _httpClient;
-    private readonly ILogger<SuperHeroService> _logger;
     
-    public SuperHeroService(HttpClient httpClient, ILogger<SuperHeroService> logger)
+    public SuperHeroService(HttpClient httpClient)
     {
         _httpClient = httpClient;
-        _logger = logger;
     }
     
-    public SuperHero Insert(SuperHero insertHero)
+    public async Task<SuperHero> Insert(InsertSuperHero insertHero)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var content = new StringContent(JsonSerializer.Serialize(insertHero), Encoding.UTF8, "application/json");
+            // Faz a requisição HTTP para a API
+            HttpResponseMessage response = await _httpClient.PostAsync("/api/SuperHero", content);
+
+            // Log da resposta JSON
+            string jsonString = await response.Content.ReadAsStringAsync();
+
+            // Verifica se a resposta foi bem-sucedida
+            if (response.IsSuccessStatusCode)
+            {
+                var resultWrapper = JsonSerializer.Deserialize<SuperHero>(jsonString, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                    
+                // Retorna a lista de SuperHero do resultado envoltório
+                return resultWrapper;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (JsonException ex)
+        {
+            return null;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
     }
 
     public async Task<SuperHero> Update(SuperHero updateHero)
@@ -51,21 +81,48 @@ public class SuperHeroService: ISuperHeroService
         }
         catch (JsonException ex)
         {
-            // Log detalhado para erro de desserialização
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
         catch (Exception ex)
         {
-            // Log detalhado para outros erros
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
     }
 
-    public void Delete(int id)
+    public async Task<List<SuperHero>?> Delete(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            // Faz a requisição HTTP para a API
+            HttpResponseMessage response = await _httpClient.DeleteAsync("/api/SuperHero/"+id);
+
+            // Log da resposta JSON
+            string jsonString = await response.Content.ReadAsStringAsync();
+
+            // Verifica se a resposta foi bem-sucedida
+            if (response.IsSuccessStatusCode)
+            {
+                var resultWrapper = JsonSerializer.Deserialize<SuperHeroResult>(jsonString, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                    
+                // Retorna a lista de SuperHero do resultado envoltório
+                return resultWrapper?.Result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (JsonException ex)
+        {
+            return null;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
     }
 
     public async Task<List<SuperHero>?> GetAll()
@@ -96,14 +153,10 @@ public class SuperHeroService: ISuperHeroService
         }
         catch (JsonException ex)
         {
-            // Log detalhado para erro de desserialização
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
         catch (Exception ex)
         {
-            // Log detalhado para outros erros
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
     }
@@ -136,14 +189,10 @@ public class SuperHeroService: ISuperHeroService
         }
         catch (JsonException ex)
         {
-            // Log detalhado para erro de desserialização
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
         catch (Exception ex)
         {
-            // Log detalhado para outros erros
-            _logger.LogError($"JSON deserialization error: {ex.Message}");
             return null;
         }
     }

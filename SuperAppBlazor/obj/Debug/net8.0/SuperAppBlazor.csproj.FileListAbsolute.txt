@@ -31,3 +31,4 @@
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/obj/Debug/net8.0/SuperAppBlazor.pdb
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/obj/Debug/net8.0/SuperAppBlazor.genruntimeconfig.cache
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/obj/Debug/net8.0/ref/SuperAppBlazor.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor/obj/Debug/net8.0/SuperAppBlazor.sourcelink.json
