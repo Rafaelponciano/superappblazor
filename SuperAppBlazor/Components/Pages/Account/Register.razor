@@ -1,0 +1,32 @@
+@page "/Account/Register"
+@attribute [AllowAnonymous]
+
+<EditForm FormName="registerForm" Model="RegisterUser" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="email">Primeiro Nome:</label>
+        <InputText id="firstName" @bind-Value="RegisterUser.FirstName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Ultimo Nome:</label>
+        <InputText id="lastName" @bind-Value="RegisterUser.LastName" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <InputText id="email" @bind-Value="RegisterUser.Email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <InputText id="password" @bind-Value="RegisterUser.Password" type="password" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Confirma o Password:</label>
+        <InputText id="confirmPassword" @bind-Value="RegisterUser.ConfirmPassword" type="password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Criar usuario</button>
+</EditForm>

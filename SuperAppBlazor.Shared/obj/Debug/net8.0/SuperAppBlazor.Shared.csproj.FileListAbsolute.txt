@@ -41,3 +41,13 @@
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
 /Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.AspNetCore.Http.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.ObjectPool.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Extensions.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/obj/Debug/net8.0/SuperAppBlazor.Shared.sourcelink.json
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Http.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/Users/rafaelpl/RiderProjects/SuperAppBlazor/SuperAppBlazor.Shared/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll

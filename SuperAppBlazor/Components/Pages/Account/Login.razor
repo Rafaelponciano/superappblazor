@@ -1,16 +1,35 @@
 @page "/Account/Login"
 
-<EditForm FormName="loginForm" Model="LoginUser" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <InputText id="email" @bind-Value="LoginUser.Email" class="form-control" />
-    </div>
+@rendermode InteractiveServer
+@if (!IsRegister)
+{
+    <EditForm FormName="loginForm" Model="LoginUser" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <InputText id="email" @bind-Value="LoginUser.Email" class="form-control" />
+        </div>
 
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <InputText id="password" @bind-Value="LoginUser.Password" type="password" class="form-control" />
-    </div>
-    <button type="submit" class="btn btn-primary">Log in</button>
-</EditForm>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <InputText id="password" @bind-Value="LoginUser.Password" type="password" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Logar no sistema</button>
+
+        <p>Não tem login? Crie um usuario!</p>
+        <button type="button" class="btn btn-outline-primary me1" onclick="@ChangeStateOfPage">
+            Criar usuario
+        </button>
+    </EditForm>
+}
+else
+{
+    <Register></Register>
+    <p>Ja tem login? Faça seu login</p>
+    <button type="button" class="btn btn-outline-primary me1" onclick="@ChangeStateOfPage">
+        Logar no sistema
+    </button>
+}
+
+

@@ -12,10 +12,13 @@
                         <NavMenu/>
                     </div>
 
+                    <article class="content px-4">
+                        @Body
+                    </article>
+
                     <div class="top-row px-4">
                         <a href="javascript:void(0);" onclick="goBack()">Back</a>
                     </div>
-
                 </div>
             </Authorized>
             <NotAuthorized>
@@ -24,12 +27,15 @@
                 {
                     <p>Você precisa estar logado para acessar esta aplicação.</p>
                     <NavLink href="account/login">Login</NavLink>
+                    <br />
+                }
+                else
+                {
+                    <article class="content px-4">
+                        @Body
+                    </article>
                 }
             </NotAuthorized>
         </AuthorizeView>
-
-        <article class="content px-4">
-            @Body
-        </article>
     </main>
 </CascadingAuthenticationState>
